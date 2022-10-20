@@ -1,0 +1,16 @@
+.center-item {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-size {
+  width: 70px;
+  height: 70px;
+}
+
+.name-app-color {
+  font-size: larger;
+  background: -webkit-linear-gradient(45deg, #1d7c9e, #16cd9a 80%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

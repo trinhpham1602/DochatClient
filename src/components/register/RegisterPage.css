@@ -1,0 +1,14 @@
+.wrapper {
+  background: #50a3a2;
+  background: -webkit-linear-gradient(45deg, #1d7c9e, #16cd9a 80%);
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn-signup {
+  background: 'white';
+  border-radius: 20px;
+  width: 50%;
+  height: 40px;
+  border: none;
+}

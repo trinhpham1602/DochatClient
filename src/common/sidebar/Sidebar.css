@@ -1,0 +1,6 @@
+.sidebar-container {
+  background-color: red;
+  position: sticky;
+  height: 100vh;
+  width: 100px;
+}
