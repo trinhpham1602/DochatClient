@@ -1,16 +1,13 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback } from 'react';
+import { useLogIn } from '../../hooks/useSignIn';
 import './LoginPage.css';
 import { SocialLoginField } from './SocialLoginField';
 
 export const LoginPage: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const onSubmit = useCallback(() => {
-    if (password && email) {
-      console.log('submited');
-    }
-  }, [email, password]);
-
+  const { logIn, setEmail, setPassword } = useLogIn();
+  const onSubmit = useCallback(async () => {
+    await logIn();
+  }, [logIn]);
   return (
     <form className='m-auto'>
       <SocialLoginField />
@@ -51,7 +48,7 @@ export const LoginPage: React.FC = () => {
             Check me out
           </label>
         </div>
-        <button type='submit' className='btn btn-primary' onClick={onSubmit}>
+        <button type='button' className='btn btn-primary' onClick={onSubmit}>
           Submit
         </button>
       </div>
